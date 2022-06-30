@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;    
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #edf8ff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    padding: 2vw;
+    text-align: center;
+}
+h1{
+    font-size: 4em;
+    font-family: 'Wendy One', sans-serif;
+}
+h1 span.name{
+    font-family: 'Tangerine', cursive;    
+    display: block;
+    margin-top: 0.2em;
+}
+h1, h2, h3, h4, h5, h6{
+    width: 100%;
+    overflow: hidden;
+}
+h3{
+    font-size: 2em;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+img, svg{
+    width: 90%;
+    max-width: 600px;
+}
+.sleepy{
+    animation: sleepy 1s infinite linear;
+    animation-direction: alternate;
+}
+.sleepy.two{
+    animation-delay: 0.2s;
+}
+.sleepy.three{
+    animation-delay: 0.4s;
+}
+.animMask{
+    display: inline-flex;
+}
+@keyframes sleepy{
+    0%{
+        transform: translateY(-8px);
+    }
+    50%{
+        transform: none;
+    }
+    100%{
+        transform: translateY(8px);
+    }
+}
+#balloon-container {
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+  }
+  
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
